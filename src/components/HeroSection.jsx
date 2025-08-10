@@ -17,11 +17,11 @@ const HeroSection = () => {
                     <source src="https://ik.imagekit.io/erakash/CRDT/final%20video%204-VEED.mp4" type="video/mp4" />
                     {/* <source src="/videos/banner-video.webm" type="video/webm" /> */}
                     {/* Fallback content */}
-                    <img
+                    {/* <img
                         src="/images/fallback-image.jpg"
                         alt="Hero section background"
                         className="w-full h-full object-cover"
-                    />
+                    /> */}
                     Your browser does not support the video tag.
                 </video>
                 {/* Video overlay for better text contrast */}

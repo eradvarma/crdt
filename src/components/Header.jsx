@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaPhone, FaEnvelope, FaChevronDown, FaBars } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaChevronDown, FaBars } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -48,20 +48,22 @@ const Header = () => {
     };
 
     return (
-        <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary-light/90 backdrop-blur-md shadow-lg' : 'bg-primary-light/70 backdrop-blur-sm'}`}>
+        <header className={`sticky top- w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary-light/90 backdrop-blur-md shadow-lg' : 'bg-primary-light/70 backdrop-blur-sm'}`}>
             {/* Top Contact Bar */}
             <div className="bg-secondary-dark text-secondary-light py-2 px-4">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex items-center space-x-4 mb-2 md:mb-0">
-                        <div className="flex items-center">
-                            <FaPhone className="mr-2" />
-                            <span>(91) 011-2659 1121</span>
-                        </div>
-                        <div className="flex items-center">
-                            <FaEnvelope className="mr-2" />
-                            <a href="mailto:hodrdat@admin.iitd.ac.in" className="hover:text-primary-light transition">
-                                hodrdat@admin.iitd.ac.in
-                            </a>
+                <div className="container mx-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="flex justify-between w-full space-x-4">
+                            <div className="flex items-center">
+                                <FaPhoneAlt className="mr-2" />
+                                <span>(91) 011-2659 1121</span>
+                            </div>
+                            <div className="flex items-center">
+                                <FaEnvelope className="mr-2" />
+                                <a href="mailto:hodrdat@admin.iitd.ac.in" className="hover:text-primary-light transition">
+                                    hodrdat@admin.iitd.ac.in
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,7 +71,7 @@ const Header = () => {
 
             {/* Main Header */}
             <div className="container mx-auto py-4 px-4">
-                <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-center">
                     {/* Logo and Institute Name */}
                     <div className="flex items-center mb-4 md:mb-0">
                         <div className="mr-4">
@@ -92,7 +94,7 @@ const Header = () => {
                                     Indian Institute of Technology Delhi
                                 </a>
                             </h4>
-                            <h2 className="text-lg md:text-xl font-bold mt-1 text-secondary-light">
+                            <h2 className="text-lg md:text-xl font-semibold mt-1 text-secondary-light">
                                 <a
                                     href="http://crdt.iitd.ac.in/index.html"
                                     className="hover:text-secondary-light/80 transition"
@@ -151,7 +153,7 @@ const Header = () => {
                                     aria-expanded={peopleMenuOpen}
                                     aria-label="Toggle people menu"
                                 >
-                                    <FaChevronDown className={`text-xs transition-transform ${peopleMenuOpen ? 'rotate-180' : ''}`} />
+                                    <FaChevronDown className={`text-xs text-white transition-transform ${peopleMenuOpen ? 'rotate-180' : ''}`} />
                                 </button>
                             </div>
                             <div
@@ -247,7 +249,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a
-                                href="http://unnatbharatabhiyan.gov.in:8080/new-website/"
+                                href="http://unnatbharatabhiyan.gov.in"
                                 className="block px-3 py-2 rounded hover:bg-secondary-dark/30 transition text-secondary-light"
                                 target="_blank"
                                 rel="noopener noreferrer"
