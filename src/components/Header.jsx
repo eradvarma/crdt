@@ -48,9 +48,9 @@ const Header = () => {
     };
 
     return (
-        <header className={`sticky top- w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary-light/90 backdrop-blur-md shadow-lg' : 'bg-primary-light/70 backdrop-blur-sm'}`}>
+        <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary-light/90 backdrop-blur-md shadow-lg' : 'bg-primary-light/70 backdrop-blur-sm'}`}>
             {/* Top Contact Bar */}
-            <div className="bg-secondary-dark text-secondary-light py-2 px-4">
+            {/* <div className="bg-secondary-dark text-secondary-light py-2 px-4">
                 <div className="container mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex justify-between w-full space-x-4">
@@ -67,7 +67,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Main Header */}
             <div className="container mx-auto py-4 px-4">
