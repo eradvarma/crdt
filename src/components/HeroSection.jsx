@@ -42,7 +42,7 @@ const HeroSection = () => {
                     <div className="animate-fade-in-up animation-delay-200">
                         <Link
                             to="/about"
-                            className="inline-block bg-primary-light hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+                            className="inline-block bg-primary-dark/80 hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg text-lg transition-all duration-300"
                         >
                             Learn More
                         </Link>
