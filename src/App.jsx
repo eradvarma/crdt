@@ -2,7 +2,26 @@ import Header from './components/Header'
 import HomePage from './pages/HomePage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
 
   return (
     <Router basename="/crdt">

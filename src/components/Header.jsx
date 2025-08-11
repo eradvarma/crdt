@@ -57,9 +57,9 @@ const Header = () => {
                         <div className="mr-4">
                             <Link to="/">
                                 <img
-                                    src="assets/images/logo.webp"
-                                    alt="Site Logo"
-                                    className="h-12 w-auto"
+                                    src="./assets/images/crdt-logo.webp"
+                                    alt="CRDT Site Logo"
+                                    className="h-10 w-auto"
                                 />
                             </Link>
                         </div>
@@ -87,6 +87,16 @@ const Header = () => {
                                         end
                                     >
                                         Home
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/about"
+                                        className={({ isActive }) =>
+                                            `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                        }
+                                    >
+                                        About
                                     </NavLink>
                                 </li>
                                 <li
@@ -163,34 +173,25 @@ const Header = () => {
                                         </NavLink>
                                     </div>
                                 </li>
+
                                 <li>
                                     <NavLink
-                                        to="/thematic-areas"
+                                        to="/academic"
                                         className={({ isActive }) =>
                                             `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
                                         }
                                     >
-                                        Thematic Areas
+                                        Academic
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink
-                                        to="/news-events"
+                                        to="/research"
                                         className={({ isActive }) =>
                                             `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
                                         }
                                     >
-                                        News & Events
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/programs-courses"
-                                        className={({ isActive }) =>
-                                            `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
-                                        }
-                                    >
-                                        Programs & Courses
+                                        Research
                                     </NavLink>
                                 </li>
                                 <li>
@@ -204,6 +205,26 @@ const Header = () => {
                                     </NavLink>
                                 </li>
                                 <li>
+                                    <NavLink
+                                        to="/events"
+                                        className={({ isActive }) =>
+                                            `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                        }
+                                    >
+                                        Events
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/alumni"
+                                        className={({ isActive }) =>
+                                            `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                        }
+                                    >
+                                        Alumni
+                                    </NavLink>
+                                </li>
+                                {/* <li>
                                     <a
                                         href="http://unnatbharatabhiyan.gov.in"
                                         className="block px-3 py-2 rounded text-sm hover:bg-secondary-dark/30 transition text-secondary-light"
@@ -212,7 +233,7 @@ const Header = () => {
                                     >
                                         UBA
                                     </a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <NavLink
                                         to="/contact"
@@ -243,6 +264,17 @@ const Header = () => {
                                 end
                             >
                                 Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/about"
+                                onClick={closeMobileMenu}
+                                className={({ isActive }) =>
+                                    `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                }
+                            >
+                                About
                             </NavLink>
                         </li>
                         <li>
@@ -307,37 +339,27 @@ const Header = () => {
                                 )}
                             </div>
                         </li>
+
                         <li>
                             <NavLink
-                                to="/thematic-areas"
+                                to="/academic"
                                 onClick={closeMobileMenu}
                                 className={({ isActive }) =>
                                     `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
                                 }
                             >
-                                Thematic Areas
+                                Academic
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to="/news-events"
+                                to="/research"
                                 onClick={closeMobileMenu}
                                 className={({ isActive }) =>
                                     `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
                                 }
                             >
-                                News & Events
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="/programs-courses"
-                                onClick={closeMobileMenu}
-                                className={({ isActive }) =>
-                                    `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
-                                }
-                            >
-                                Programs & Courses
+                                Research
                             </NavLink>
                         </li>
                         <li>
@@ -352,6 +374,27 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink
+                                to="/events"
+                                onClick={closeMobileMenu}
+                                className={({ isActive }) =>
+                                    `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                }
+                            >
+                                Events
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/alumni"
+                                className={({ isActive }) =>
+                                    `block px-3 py-2 rounded text-sm transition text-secondary-light ${isActive ? 'bg-secondary-dark/30 font-medium' : 'hover:bg-secondary-dark/30'}`
+                                }
+                            >
+                                Alumni
+                            </NavLink>
+                        </li>
+                        {/* <li>
                             <a
                                 href="http://unnatbharatabhiyan.gov.in:8080/new-website/"
                                 className="block px-3 py-2 rounded text-sm hover:bg-secondary-dark/30 transition text-secondary-light"
@@ -361,7 +404,7 @@ const Header = () => {
                             >
                                 UBA
                             </a>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink
                                 to="/contact"

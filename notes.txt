@@ -1,2 +1,15 @@
 COLOR: #f8efe0
  #6f4626
+
+
+1152px
+1280px
+
+highlight: {
+    first: "#532e70",
+    second: "#253772",
+    third: "#722e43",
+    fourth: "#615f29",
+},
+
+Centre for Rural Development & Technology || Indian Institute of Technology Delhi
