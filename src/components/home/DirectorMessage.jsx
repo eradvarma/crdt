@@ -19,7 +19,7 @@ const DirectorMessage = () => {
                     {/* Right: Content */}
                     <div data-aos="fade-in" data-aos-duration="800">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary-dark mb-4">
-                            Director’s Vision for Sustainable Rural Development
+                            CRDT IIT Delhi: Pioneering Rural Development through Science & Technology
                         </h2>
                         <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                             For over four decades, CRDT at IIT Delhi has been transforming rural lives through a unique blend of
