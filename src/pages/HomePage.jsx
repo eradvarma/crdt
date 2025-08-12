@@ -12,7 +12,6 @@ const HomePage = () => {
             <AboutCrdt />
             <VisionMission />
             <DirectorMessage />
-            {/* <ProfessorsSlider /> */}
         </div>
     )
 }

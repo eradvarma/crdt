@@ -58,7 +58,7 @@ const Header = () => {
                             <Link to="/">
                                 <img
                                     src="./assets/images/crdt-logo.webp"
-                                    alt="CRDT Site Logo"
+                                    alt="CRDT Logo"
                                     className="h-10 w-auto"
                                 />
                             </Link>
@@ -68,16 +68,16 @@ const Header = () => {
                     {/* Hamburger menu on right side (mobile only) */}
                     <button
                         onClick={toggleMobileMenu}
-                        className="md:hidden p-2 rounded-md hover:bg-primary-dark text-secondary-light"
+                        className="lg:hidden p-2 rounded-md hover:bg-primary-dark text-secondary-light"
                         aria-label="Toggle menu"
                     >
                         <FaBars className="text-xl" />
                     </button>
 
                     {/* Desktop Navigation - Center aligned */}
-                    <nav className="hidden md:block">
+                    <nav className="hidden lg:block">
                         <div className="container mx-auto px-4">
-                            <ul className="flex space-x-6">
+                            <ul className="flex space-x-2">
                                 <li>
                                     <NavLink
                                         to="/"
@@ -251,7 +251,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-primary-dark`}>
+            <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-primary-dark`}>
                 <div className="container mx-auto px-4 py-2">
                     <ul className="space-y-2">
                         <li>
