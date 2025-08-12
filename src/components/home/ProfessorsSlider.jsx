@@ -1,64 +1,109 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-// Import Swiper styles
+import { Autoplay, Mousewheel, FreeMode } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
 import SliderCard from './SliderCard';
 
+
 const ProfessorsSlider = () => {
-    // Sample professor data
     const professors = [
         {
             id: 1,
-            name: "Prof. John Doe",
-            designation: "Director, CRDT",
+            name: "Virendra Kumar Vijay",
+            designation: "Professor",
             department: "Department of Rural Development",
-            image: "/assets/images/professors/prof1.jpg"
+            image: "https://placehold.co/250"
         },
         {
             id: 2,
-            name: "Prof. Jane Smith",
-            designation: "Senior Professor",
-            department: "Agricultural Technology",
-            image: "/assets/images/professors/prof2.jpg"
+            name: "V.M. Chariar",
+            designation: "Professor",
+            department: "Department of Rural Development",
+            image: "https://placehold.co/250"
         },
-        // Add more professors as needed
+        {
+            id: 3,
+            name: "Anushree Malik",
+            designation: "Professor",
+            department: "Department of Rural Development",
+            image: "https://placehold.co/250"
+        },
+        {
+            id: 4,
+            name: "Jatindra K. Sahu",
+            designation: "Professor",
+            department: "Department of Rural Development",
+            image: "https://placehold.co/250"
+        },
+        {
+            id: 5,
+            name: "Priyanka Kaushal",
+            designation: "Professor",
+            department: "Department of Rural Development",
+            image: "https://placehold.co/250"
+        },
+        {
+            id: 6,
+            name: "Hariprasad",
+            designation: "Professor",
+            department: "Department of Rural Development",
+            image: "https://placehold.co/250"
+        },
     ];
-
     return (
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-gray-50 overflow-hidden">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-8 text-primary-dark">
-                    Our Professors
+                    Our Faculty
                 </h2>
 
                 <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
+                    modules={[Autoplay, Mousewheel, FreeMode]}
                     spaceBetween={30}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 3000 }}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                        },
+                    slidesPerView={'auto'} // Makes slides fit naturally
+                    // loop={true}
+                    freeMode={{
+                        enabled: true,
+                        momentum: true,
+                        momentumRatio: 0.5,
+                        momentumBounce: true
                     }}
-                    className="pb-10"
+                    mousewheel={{
+                        forceToAxis: true,
+                        sensitivity: 1,
+                        releaseOnEdges: true,
+                        invert: false
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                        pauseOnMouseEnter: true
+                    }}
+                    breakpoints={{
+                        640: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 }
+                    }}
+                    className="!overflow-visible cursor-grab active:cursor-grabbing"
+                    grabCursor={true}
                 >
                     {professors.map((professor) => (
-                        <SwiperSlide key={professor.id}>
+                        <SwiperSlide key={professor.id} className="!w-auto">
                             <SliderCard professor={professor} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
+
+            {/* Optional: Add these styles to your global CSS */}
+            <style jsx global>{`
+                .swiper-slide {
+                    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+                }
+                .swiper-wrapper {
+                    align-items: center;
+                }
+            `}</style>
         </section>
     );
 };
